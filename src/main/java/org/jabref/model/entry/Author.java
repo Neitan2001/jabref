@@ -120,6 +120,17 @@ public class Author {
         return sb.toString().trim();
     }
 
+    public static String capitalizeAuthorName(String name) {
+        String words[]=name.split("\\s");
+        String capitalizeWord="";
+        for(String w:words){
+            String first=w.substring(0,1);
+            String afterfirst=w.substring(1);
+            capitalizeWord+=first.toUpperCase()+afterfirst+" ";
+        }
+        return capitalizeWord.trim();
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(firstAbbr, firstPart, jrPart, lastPart, vonPart);

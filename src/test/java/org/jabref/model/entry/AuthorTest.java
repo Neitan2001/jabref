@@ -70,6 +70,11 @@ class AuthorTest {
         assertEquals("Ameli A. A.", Author.addDotIfAbbreviation("Ameli AA"));
     }
 
+    @Test
+    void capitalizedAuthorName() {
+        assertEquals("Natan Tavares Santana", Author.capitalizeAuthorName("natan tavares santana"));
+    }
+
     @ParameterizedTest
     @ValueSource(strings = {"1", "1 23"})
     void addDotIfAbbreviationIfStartsWithNumber(String input) {

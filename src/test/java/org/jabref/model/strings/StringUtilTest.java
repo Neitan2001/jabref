@@ -148,9 +148,13 @@ class StringUtilTest {
 
     @Test
     void testGetPart() {
+        //CT1
         assertEquals("{roupa}", StringUtil.getPart( "O rato roeu a {roupa} do rei de roma", 13, false));
+        //CT2
         assertEquals("", StringUtil.getPart( "", 0, false));
+        //CT3
         assertEquals("", StringUtil.getPart( "Um passo por }dia}", 12, false));
+        //CT4
         assertEquals("dia", StringUtil.getPart( "Um passo por dia", 12, true));
     }
 
